@@ -1,4 +1,4 @@
-/* Common */
+/* #region Common */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,26 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.container {
+    width: 70%;
+    max-width: 1176px;
+    margin: auto
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+    padding: 1rem;
+}
+
+/* #endregion Common */
+
 
 /* #region Header */
 header {
@@ -40,3 +60,20 @@ main {
 }
 
 /* #endregion Main */
+
+/* #region Footer*/
+footer {
+    background-image: url(../images/footer-montagne-bottom.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    ul {
+        list-style: none;
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+/* #endregion Footer*/
