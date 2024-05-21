@@ -1,8 +1,8 @@
 <header>        
         <img src="{{ Vite::asset('resources/images/la-molisana-logo.png') }}">
         <nav>
-            <a href="/">Home</a>
-            <a href="/products">Products</a>
-            <a href="/news">News</a>
+            <a href="{{route('home')}}" class="{{ Route::currentRouteName() === 'home' ? 'active' :'' }}">Home</a>
+            <a href="{{route('products')}}" class="{{ Route::currentRouteName() === 'products' ? 'active' :'' }}">Products</a>
+            <a href="{{route('news')}}" class="{{ Route::currentRouteName() === 'news' ? 'active' :'' }}">News</a>
         </nav>
 </header>

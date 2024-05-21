@@ -15,15 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('guests.welcome');
-});
+})->name('home');
 
 Route::get('/products', function () {
-    return view('guests.products');
-});
+
+    $pasta = config('data.products');
+    
+    // dd($pasta);
+
+    return view('guests.products', compact('pasta'));
+    
+})->name('products');
 
 Route::get('/news', function () {
     return view('guests.news');
-});
+})->name('news');
 
 Route::get('/app', function () {
     return view('layouts.app');
