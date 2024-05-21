@@ -28,7 +28,11 @@ Route::get('/products', function () {
 })->name('products');
 
 Route::get('/news', function () {
-    return view('guests.news');
+
+    //dd(config('data.posts'));
+
+
+    return view('guests.news',  ['posts' => config('data.posts')]);
 })->name('news');
 
 Route::get('/app', function () {

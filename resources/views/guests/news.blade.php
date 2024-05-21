@@ -2,6 +2,24 @@
 
 @section('content')
 
-<h1>News page</h1>
+<section id="pasta">
+    <div class="container">
+        <h1>Blog page</h1>
+        <div class="row">
+            @foreach($posts as $post)
+                <div class="col-4">
+                    <div class="card">
+                        
+                        {{$post['titolo']}}
+
+                        <p>
+                            {{$post['contenuto']}}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 
 @endsection
